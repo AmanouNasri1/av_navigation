@@ -1,0 +1,79 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/road/protos/StraightRoadSegment.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/vehicles/protos/toyota/ToyotaPriusSimple.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/road/protos/CurvedRoadSegment.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.2066634521355022 -0.9653942677212302 -0.15907270476868982 5.327803779601273
+  position -61.98662839502529 -22.233044072254575 128.8958827645648
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Solid {
+  translation -10 -2.49796 0.4
+  children [
+    StraightRoadSegment {
+      length 30
+    }
+    StraightRoadSegment {
+      name "road(1)"
+      length 30
+    }
+  ]
+  name "solid_straight"
+}
+Solid {
+  translation 30 -12.5 0.4
+  rotation 0 0 -1 1.57079
+  children [
+    StraightRoadSegment {
+      length 30
+    }
+    StraightRoadSegment {
+      name "road(1)"
+      length 30
+    }
+  ]
+  name "solid_straight_1"
+}
+Solid {
+  translation 20 -12.5 0.4
+  children [
+    CurvedRoadSegment {
+    }
+  ]
+  name "solid_curved"
+}
+Robot {
+  children [
+    ToyotaPriusSimple {
+      name "toyota_simple"
+      sensorsSlotFront [
+        Camera {
+          name "camera_front"
+        }
+      ]
+      sensorsSlotRear [
+        Camera {
+          name "camera_rear"
+        }
+      ]
+      sensorsSlotCenter [
+        GPS {
+          name "gps_sensor"
+        }
+        InertialUnit {
+          name "imu_sensor"
+        }
+      ]
+    }
+  ]
+  name "toyota_simple"
+}
