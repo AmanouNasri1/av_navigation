@@ -1,0 +1,12 @@
+webots_ros2_driver:
+  ros__parameters:
+    devices:
+      lidar:
+        topicName: "/vehicle/lidar/point_cloud"
+      camera:
+        topicName: "/vehicle/camera/image_color"
+      imu:
+        topicName: "/vehicle/imu/data"
+        alwaysPublish: true
+      gps:
+        topicName: "/vehicle/gps"

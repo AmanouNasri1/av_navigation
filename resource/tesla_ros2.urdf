@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<robot name="Tesla Webots">
+    <webots>
+        <plugin type="av_navigation.av_driver.AVDriver" />
+    </webots>
+</robot>
