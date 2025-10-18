@@ -211,3 +211,11 @@ __marimo__/
 build/
 install/
 log/
+
+# folder to be ignored
+
+test/
+
+# files
+
+av_navigation
