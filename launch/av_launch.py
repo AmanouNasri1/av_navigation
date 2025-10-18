@@ -1,38 +1,71 @@
 import os
-import launch
 from launch import LaunchDescription
-from ament_index_python.packages import get_package_share_directory
+from launch.actions import DeclareLaunchArgument, RegisterEventHandler, EmitEvent, TimerAction, OpaqueFunction
+from launch.event_handlers import OnProcessExit
+from launch.events import Shutdown
+from launch.substitutions import LaunchConfiguration
 from webots_ros2_driver.webots_launcher import WebotsLauncher
 from webots_ros2_driver.webots_controller import WebotsController
 
-def generate_launch_description():
-    # Get absolute path to the package
-    package_dir = get_package_share_directory('av_navigation')
-    robot_description_path = os.path.join(package_dir, 'resource', 'toyota_prius_ros2.urdf')
+def launch_setup(context, *args, **kwargs):
+    world_path = LaunchConfiguration('world').perform(context)
 
-    # Launch the Webots simulation with the specified world
+    # Start physics automatically
+    os.environ["WEBOTS_ROS2_AUTOSTART"] = "1"
+
     webots = WebotsLauncher(
-        world=os.path.join(package_dir, 'worlds', 'av_world.wbt')
+        world=world_path,
+        ros2_supervisor=True
     )
 
-    # Launch the robot controller
+    urdf_path = os.path.join(
+        os.getenv('HOME'),
+        'ros2_ws',
+        'src',
+        'av_navigation',
+        'resource',
+        'tesla_ros2.urdf'
+    )
+
+    # Attach controller to the car (the name must be "vehicle" in the world)
     av_driver = WebotsController(
-        robot_name='toyota_simple',
-        parameters={
-            'robot_description': robot_description_path,
-            'use_sim_time': True
-        }
+        robot_name='vehicle',
+        parameters=[
+            {'robot_description': urdf_path, 'use_sim_time': True},
+            os.path.join(
+                os.getenv('HOME'),
+                'ros2_ws',
+                'src',
+                'av_navigation',
+                'config',
+                'tesla_sensors.yaml'
+            )
+        ],
+        respawn=True
     )
 
+    delayed_driver = TimerAction(period=2.5, actions=[av_driver])
 
-    # Return launch description
-    return LaunchDescription([
-        webots,
-        av_driver,
-        launch.actions.RegisterEventHandler(
-            event_handler=launch.event_handlers.OnProcessExit(
-                target_action=webots,
-                on_exit=[launch.actions.EmitEvent(event=launch.events.Shutdown())],
-            )
+    shutdown_event = RegisterEventHandler(
+        OnProcessExit(
+            target_action=webots,
+            on_exit=[EmitEvent(event=Shutdown())]
         )
+    )
+
+    return [webots, delayed_driver, shutdown_event]
+
+def generate_launch_description():
+    default_world_path = os.path.join(
+        os.getenv('HOME'),
+        'ros2_ws',
+        'src',
+        'av_navigation',
+        'worlds',
+        'av_world.wbt'
+    )
+
+    return LaunchDescription([
+        DeclareLaunchArgument('world', default_value=default_world_path),
+        OpaqueFunction(function=launch_setup)
     ])
