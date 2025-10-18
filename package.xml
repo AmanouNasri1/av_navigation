@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>av_navigation</name>
+  <version>0.1.0</version>
+  <description>Autonomous Vehicle Navigation project — Webots Tesla simulation with ROS 2 Humble, SLAM, and teleoperation.</description>
+
+  <maintainer email="aman@example.com">Aman</maintainer>
+  <license>MIT</license>
+
+  <url type="website">https://github.com/aman/av_navigation</url>
+  <url type="repository">https://github.com/aman/av_navigation</url>
+
+  <!-- Core ROS 2 dependencies -->
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>ackermann_msgs</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>webots_ros2_driver</exec_depend>
+
+  <!-- Python dependencies -->
+  <exec_depend>python3-numpy</exec_depend>
+  <exec_depend>python3-opencv</exec_depend>
+
+  <!-- Optional visualization / testing -->
+  <exec_depend>rviz2</exec_depend>
+  <exec_depend>slam_toolbox</exec_depend>
+
+  <!-- Lint / test (optional) -->
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
