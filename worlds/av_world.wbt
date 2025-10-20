@@ -23,6 +23,17 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/obstacles/protos/OilBarrel.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/road/protos/Crossroad.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/vehicles/protos/tesla/TeslaModel3.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/trees/protos/BigSassafras.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/trees/protos/Cypress.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/trees/protos/Oak.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/trees/protos/PalmTree.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/trees/protos/Pine.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/trees/protos/Sassafras.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/buildings/protos/TheThreeTowers.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/buildings/protos/BigGlassTower.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/buildings/protos/CyberboticsTower.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/buildings/protos/BuildingUnderConstruction.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/buildings/protos/HollowBuilding.proto"
 
 WorldInfo {
   info [
@@ -55,8 +66,8 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation 0.09762493861797146 0.004411898142948675 -0.9952134979564 3.051734674043785
-  position 72.41595764874819 48.48581343983508 12.240315765543048
+  orientation -0.24582508889588295 0.016849817006017603 0.9691677405569147 3.008913159686209
+  position 191.69724335519467 34.11776897672978 98.12750498303821
   near 1
   follow "vehicle"
   followSmoothness 0
@@ -971,12 +982,378 @@ Crossroad {
     "6"
   ]
 }
+BigSassafras {
+  translation -83.1255 76.8796 -1.76215e-12
+}
+Cypress {
+  translation -56.0645 -88.1658 -1.63425e-13
+}
+Cypress {
+  translation 85.9794 -116.051 -1.91846e-13
+  name "cypress tree(1)"
+}
+Cypress {
+  translation 104.501 -105.59 -7.81597e-14
+  name "cypress tree(2)"
+}
+Cypress {
+  translation -1.95538 -85.213 -4.9738e-14
+  name "cypress tree(3)"
+}
+Cypress {
+  translation -17.7276 -84.352 -4.9738e-14
+  name "cypress tree(4)"
+}
+Cypress {
+  translation 24.1272 -86.1981 -4.9738e-14
+  name "cypress tree(5)"
+}
+Cypress {
+  translation 82.9344 -68.8496 -4.9738e-14
+  name "cypress tree(6)"
+}
+Cypress {
+  translation 74.0466 -83.7225 -4.9738e-14
+  name "cypress tree(7)"
+}
+Cypress {
+  translation -57.741 -78.4269 -1.35003e-13
+  name "cypress tree(8)"
+}
+Cypress {
+  translation 86.778 -51.7686 -4.9738e-14
+  name "cypress tree(9)"
+}
+Cypress {
+  translation 53.0352 -88.0109 -4.9738e-14
+  name "cypress tree(10)"
+}
+Cypress {
+  translation 89.0276 -33.4722 -4.9738e-14
+  name "cypress tree(11)"
+}
+Cypress {
+  translation 124.412 -41.763 1.37135e-12
+  name "cypress tree(12)"
+}
+Cypress {
+  translation 63.9463 -120.09 -2.20268e-13
+  name "cypress tree(13)"
+}
+Cypress {
+  translation 74.4855 -119.439 -7.81597e-14
+  name "cypress tree(14)"
+}
+Cypress {
+  translation -23.5204 -117.356 -3.55271e-14
+  name "cypress tree(15)"
+}
+Cypress {
+  translation 94.97 -111.813 1.9682e-12
+  name "cypress tree(16)"
+}
+Cypress {
+  translation -49.0137 -98.7747 9.23705e-14
+  name "cypress tree(17)"
+}
+Cypress {
+  translation 56.6181 -119.562 1.49214e-13
+  name "cypress tree(18)"
+}
+Cypress {
+  translation 121.971 -51.9718 -2.01084e-12
+  name "cypress tree(19)"
+}
+Cypress {
+  translation 123.072 -66.4308 -1.91847e-13
+  name "cypress tree(20)"
+}
+Cypress {
+  translation 121.45 -77.854 3.55271e-14
+  name "cypress tree(21)"
+}
+Cypress {
+  translation 44.2204 -120.899 -1.49214e-13
+  name "cypress tree(22)"
+}
+Cypress {
+  translation 116.236 -88.7813 -1.81188e-12
+  name "cypress tree(23)"
+}
+Cypress {
+  translation -41.9485 -106.221 -7.10543e-14
+  name "cypress tree(24)"
+}
+Cypress {
+  translation -13.7854 -119.074 2.34479e-13
+  name "cypress tree(25)"
+}
+Cypress {
+  translation -33.0414 -113.42 -5.68434e-14
+  name "cypress tree(26)"
+}
+Cypress {
+  translation 32.7071 -121.027 -4.9738e-14
+  name "cypress tree(27)"
+}
+Cypress {
+  translation 16.9756 -120.778 -3.55271e-14
+  name "cypress tree(28)"
+}
+Cypress {
+  translation 1.39023 -120.445 -3.55271e-14
+  name "cypress tree(29)"
+}
+Cypress {
+  translation 110.561 -97.9909 1.39977e-12
+  name "cypress tree(30)"
+}
+Oak {
+  translation 24.367 64.8139 0
+}
+PalmTree {
+  translation -22.4587 59.3322 0
+}
+PalmTree {
+  translation -25.4395 -26.6231 0
+  name "palm tree(1)"
+}
+PalmTree {
+  translation -62.3197 11.6068 4.26326e-14
+  name "palm tree(2)"
+}
+PalmTree {
+  translation 4.02197 -27.936 1.23634e-12
+  name "palm tree(3)"
+}
+PalmTree {
+  translation -28.4521 -13.3261 0
+  name "palm tree(4)"
+}
+PalmTree {
+  translation 10.3614 27.1839 -1.13687e-13
+  name "palm tree(5)"
+}
+PalmTree {
+  translation 7.91 -60.4737 -5.68434e-14
+  name "palm tree(6)"
+}
+PalmTree {
+  translation 1.78516 27.308 0
+  name "palm tree(7)"
+}
+PalmTree {
+  translation 60.3274 14.9007 0
+  name "palm tree(8)"
+}
+PalmTree {
+  translation -28.4047 1.62778 0
+  name "palm tree(9)"
+}
+PalmTree {
+  translation -56.4891 31.6026 6.53699e-13
+  name "palm tree(10)"
+}
+PalmTree {
+  translation -84.0554 -18.7037 -2.84217e-14
+  name "palm tree(11)"
+}
+PalmTree {
+  translation -14.1931 0.380791 -1.42109e-14
+  name "palm tree(12)"
+}
+PalmTree {
+  translation -86.3005 1.17798 -5.68434e-14
+  name "palm tree(13)"
+}
+PalmTree {
+  translation -10.2745 89.9145 0
+  name "palm tree(14)"
+}
+PalmTree {
+  translation -14.9509 12.897 2.84217e-14
+  name "palm tree(15)"
+}
+PalmTree {
+  translation -13.9659 -14.322 1.32161e-12
+  name "palm tree(16)"
+}
+PalmTree {
+  translation -15.0476 22.5594 0
+  name "palm tree(17)"
+}
+PalmTree {
+  translation -64.8684 -5.87313 0
+  name "palm tree(18)"
+}
+PalmTree {
+  translation 21.8726 -21.0358 7.95808e-13
+  name "palm tree(19)"
+}
+PalmTree {
+  translation 19.0875 59.9934 7.10543e-15
+  name "palm tree(20)"
+}
+PalmTree {
+  translation -28.3323 -60.0809 -1.42109e-14
+  name "palm tree(21)"
+}
+PalmTree {
+  translation 19.9363 27.6533 -8.38441e-13
+  name "palm tree(22)"
+}
+PalmTree {
+  translation -30.6273 53.0083 -4.26326e-14
+  name "palm tree(23)"
+}
+PalmTree {
+  translation -45.3538 45.3968 1.42109e-14
+  name "palm tree(24)"
+}
+PalmTree {
+  translation -20.795 6.29946 0
+  name "palm tree(25)"
+}
+PalmTree {
+  translation -20.4576 -7.09745 0
+  name "palm tree(26)"
+}
+PalmTree {
+  translation -7.94848 62.143 7.24754e-13
+  name "palm tree(27)"
+}
+PalmTree {
+  translation 28.7453 28.7281 0
+  name "palm tree(28)"
+}
+PalmTree {
+  translation 1.70081 89.4702 0
+  name "palm tree(29)"
+}
+PalmTree {
+  translation -20.0061 -28.6819 0
+  name "palm tree(30)"
+}
+Pine {
+  translation 27.4214 11.6348 0
+}
+Sassafras {
+  translation 3.81296 63.4695 0
+  name "sassafras tree(15)"
+}
+Sassafras {
+  translation -58.0938 86.1644 0
+  name "sassafras tree(16)"
+}
+Sassafras {
+  translation -82.823 25.3996 0
+  name "sassafras tree(17)"
+}
+Sassafras {
+  translation 61.8363 60.5 2.84217e-14
+  name "sassafras tree(18)"
+}
+Sassafras {
+  translation 81.3635 21.8118 -8.52651e-14
+  name "sassafras tree(1)"
+}
+Sassafras {
+  translation 15.7328 85.7708 0
+  name "sassafras tree(2)"
+}
+Sassafras {
+  translation -32.2023 87.7798 0
+  name "sassafras tree(3)"
+}
+Sassafras {
+  translation 25.3766 -6.73963 -2.84217e-14
+  name "sassafras tree(4)"
+}
+Sassafras {
+  translation 1.01448 -60.9314 8.52651e-14
+  name "sassafras tree(5)"
+}
+Sassafras {
+  translation -3.55261 26.4123 0
+  name "sassafras tree(6)"
+}
+Sassafras {
+  translation -13.207 -61.7034 2.84217e-14
+  name "sassafras tree(7)"
+}
+Sassafras {
+  translation -5.74336 -29.0935 -4.26326e-14
+  name "sassafras tree(8)"
+}
+Sassafras {
+  translation -62.932 -22.9219 0
+  name "sassafras tree(9)"
+}
+Sassafras {
+  translation 65.5555 27.3439 2.84217e-14
+  name "sassafras tree(10)"
+}
+Sassafras {
+  translation -87.2485 54.2626 3.41061e-13
+  name "sassafras tree(11)"
+}
+Sassafras {
+  translation 87.5414 9.02498 2.84217e-14
+  name "sassafras tree(12)"
+}
+Sassafras {
+  translation -25.6175 14.7011 0
+  name "sassafras tree(13)"
+}
+Sassafras {
+  translation 18.1588 -24.3513 0
+  name "sassafras tree(14)"
+}
+TheThreeTowers {
+  translation -53.614 56.2746 1.98952e-12
+  rotation 0 0 1 2.23184
+}
+BigGlassTower {
+  translation -14.1179 79.6408 5.68434e-14
+}
+BigGlassTower {
+  translation 9.11768 74.4294 5.68434e-14
+  name "big glass tower(1)"
+}
+BigGlassTower {
+  translation -75.4546 4.52728 1.13687e-13
+  rotation 0 0 1 0.772308
+  name "big glass tower(2)"
+}
+CyberboticsTower {
+  translation 62.2984 -67.7397 1.59162e-12
+}
+BuildingUnderConstruction {
+  translation 68.7422 -34.3661 -5.68434e-14
+}
+HollowBuilding {
+  translation 3.0964 -4.01999 -5.68434e-14
+}
+CyberboticsTower {
+  translation -79.1146 -71.145 -3.52429e-12
+  rotation 0 0 -1 0.163621
+  name "Cyberbotics tower(1)"
+}
+CyberboticsTower {
+  translation 84.2476 77.789 1.64846e-12
+  name "Cyberbotics tower(2)"
+}
+CyberboticsTower {
+  translation 35.3149 -68.2159 1.59162e-12
+  name "Cyberbotics tower(3)"
+}
 TeslaModel3 {
-  translation 31.4381 47.0076 0.400134
+  translation 30.5461 52.684 0.400134
   rotation 0 0 1 3.1415
   controller "<extern>"
   sensorsSlotFront [
     Camera {
+      name "camera"
       translation -2.12 0 0.93
       fieldOfView 1
       width 360
